@@ -30,34 +30,6 @@ module.exports = {
     'promise/always-return': 'off',
     'promise/catch-or-return': 'off',
     'react-hooks/exhaustive-deps': 'error',
-    'no-restricted-imports': [
-      'error',
-      {
-        paths: [
-          {
-            name: 'dayjs',
-            message: "Please import from '@/common/dayjs' instead."
-          },
-          {
-            name: 'antd',
-            importNames: ['notification'],
-            message: "Please import 'notification' from '@/appSwitch/CustomNotification' instead."
-          },
-          {
-            name: 'react-intl',
-            importNames: ['useIntl'],
-            message: "Please import 'intlRef' from '@/appSwitch/Intl' instead."
-          }
-        ],
-        patterns: [
-          {
-            group: ['src/*'],
-            message:
-              "Please import from '@/' instead. Example: import { getStore } from '@/store/store'"
-          }
-        ]
-      }
-    ],
     'prettier/prettier': ['warn'],
     'no-console': 'error'
   },
@@ -80,12 +52,6 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
         tsconfigRootDir: __dirname
-      }
-    },
-    {
-      files: ['**/*.stories.*'],
-      rules: {
-        'import/no-anonymous-default-export': 'off'
       }
     }
   ]
